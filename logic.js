@@ -196,6 +196,8 @@ function playerMove(cell) {
 		var flatVal = computerMove[0] * 3 + computerMove[1];
 		var $targetCell = $($(".cell").get(flatVal));
 		$($targetCell.children()[0]).text(computerText);
+		$targetCell.addClass("occupied-cell");
+		$targetCell.removeClass("cell-hover");
 		grid = getGrid();
 		printGrid(grid);
 		if(checkWinner(grid, computerVal)) {

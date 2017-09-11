@@ -36,13 +36,20 @@ body {
 }
 
 .cell {
-	width: 40px;
-	height: 40px;
+	width: 20%;
+	height: 20%;
 	background-color: red;
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.occupied-cell {
+	width: 100%;
+	height: 100%;
+
+	background-color: grey;
 }
 
 .cell-hover:hover {
