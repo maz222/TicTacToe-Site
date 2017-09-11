@@ -215,6 +215,8 @@ function restartGame() {
 	var $cells = $(".cell");
 	$cells.each(function() {
 		$($(this).children()[0]).text("");
+		$(this).removeClass("occupied-cell");
+		$(this).addClass("cell-hover");
 	})
 	$("#header-text").text("Player's turn");
 }
