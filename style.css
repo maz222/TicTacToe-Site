@@ -1,4 +1,5 @@
 body {
+	margin: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -16,19 +17,25 @@ body {
 }
 
 #gameboard {
-	width: 600px;
-	height: 600px;
-	margin: 40px;
+	width: 40vw;
+	height: 40vw;
 
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-direction: column;
 	flex-wrap: wrap;
 }
 
+.cell-row {
+	width: 100%;
+	height: 33%;
+
+	display: flex;
+}
+
 .cell-container {
-	width: 200px;
-	height: 200px;
+	width: 33%;
+	height: 100%;
+
 
 	display: flex;
 	justify-content: center;
