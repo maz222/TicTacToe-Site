@@ -4,15 +4,17 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="logic.js"></script>
 		<script src="main.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
 	</head>
 	<body>
-		<div id="header">
+		<div id="header" class="player-color">
 			<h1 id="header-text">Player's turn</h1>
+			<button type="button" id="restart-button">Restart</button>
 		</div>
 		<div id="gameboard">
 			<div class="cell-row">
 				<div class="cell-container">
-					<div class="cell cell-hover">
+					<div class="cell cell-hover grey-cell">
 						<h2 class="cell-label"></h2>
 					</div>
 				</div>
@@ -22,10 +24,11 @@
 					</div>
 				</div>
 				<div class="cell-container">
-					<div class="cell cell-hover">
+					<div class="cell cell-hover grey-cell">
 						<h2 class="cell-label"></h2>
 					</div>
 				</div>
+				<div class="buffer"></div>
 			</div>
 			<div class="cell-row">
 				<div class="cell-container">
@@ -34,7 +37,7 @@
 					</div>
 				</div>
 				<div class="cell-container">
-					<div class="cell cell-hover">
+					<div class="cell cell-hover grey-cell">
 						<h2 class="cell-label"></h2>
 					</div>
 				</div>
@@ -43,10 +46,11 @@
 						<h2 class="cell-label"></h2>
 					</div>
 				</div>
+				<div class="buffer"></div>
 			</div>
 			<div class="cell-row">
 				<div class="cell-container">
-					<div class="cell cell-hover">
+					<div class="cell cell-hover grey-cell">
 						<h2 class="cell-label"></h2>
 					</div>
 				</div>
@@ -56,12 +60,12 @@
 					</div>
 				</div>
 				<div class="cell-container">
-					<div class="cell cell-hover">
+					<div class="cell cell-hover grey-cell">
 						<h2 class="cell-label"></h2>
 					</div>
 				</div>
+				<div class="buffer"></div>
 			</div>
 		</div>
-		<button type="button" id="restart-button">Restart</button>
 	</body>
 </html>

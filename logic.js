@@ -178,6 +178,8 @@ function playerMove(cell) {
 	//mark player's move
 	$($(cell).children()[0]).text(humanText);
 	$("#header-text").text("Computer's turn");
+	$("#header").removeClass("player-color");
+	$("#header").addClass("computer-color");
 	var grid = getGrid();
 	if(checkWinner(grid, humanVal)) {
 		//game over!!!
@@ -187,6 +189,7 @@ function playerMove(cell) {
 	}
 	else if(checkTie(grid)) {
 		$("#header-text").text("Tie game!");
+		$("#header").addClass("tie-color");
 		gameOver = true;
 		return;
 	}
@@ -197,6 +200,7 @@ function playerMove(cell) {
 		var $targetCell = $($(".cell").get(flatVal));
 		$($targetCell.children()[0]).text(computerText);
 		$targetCell.addClass("occupied-cell");
+		$targetCell.addClass("computer-color");
 		$targetCell.removeClass("cell-hover");
 		grid = getGrid();
 		printGrid(grid);
@@ -208,6 +212,8 @@ function playerMove(cell) {
 		}
 	}
 	$("#header-text").text("Player's turn");
+	$("#header").removeClass("computer-color");
+	$("#header").addClass("player-color");
 }
 
 function restartGame() {
@@ -216,7 +222,12 @@ function restartGame() {
 	$cells.each(function() {
 		$($(this).children()[0]).text("");
 		$(this).removeClass("occupied-cell");
+		$(this).removeClass("player-color");
+		$(this).removeClass("computer-color");
 		$(this).addClass("cell-hover");
 	})
 	$("#header-text").text("Player's turn");
+	$("#header").removeClass("computer-color");
+	$("#header").removeClass("tie-color");
+	$("#header").addClass("player-color");
 }
